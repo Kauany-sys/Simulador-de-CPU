@@ -1,19 +1,12 @@
-# =============================================================================
-# SIMULADOR DO CICLO DE INSTRUÇÃO DO PROCESSADOR
-# Disciplina: Arquitetura de Computadores - IFSULDEMINAS Campus Machado
-# Professor: Renan
-# =============================================================================
 # Este programa simula o funcionamento básico de uma CPU, reproduzindo
 # as 6 etapas do ciclo de instrução: Fetch, Decode, Busca de Operandos,
 # Execução, Armazenamento e Atualização do PC.
-# =============================================================================
 
-# -----------------------------------------------------------------------------
 # MEMÓRIA DE INSTRUÇÕES
 # Cada instrução é representada como uma lista:
 # [OPERAÇÃO, operando1, operando2, ...]
 # Esta é a "RAM" que a CPU irá percorrer sequencialmente usando o PC.
-# -----------------------------------------------------------------------------
+
 memoria = [
     ["ADD", 10, 20],         # Soma simples: 10 + 20
     ["SUB", 50, 15],         # Subtração: 50 - 15
@@ -242,11 +235,8 @@ def etapa6_atualiza_pc(pc, novo_pc=None):
     print(f"    PC = {pc}")
     return pc
 
-
-# =============================================================================
 # LOOP PRINCIPAL DA CPU
 # Simula o ciclo fetch-decode-execute continuamente até encontrar END.
-# =============================================================================
 
 def executar_cpu():
     global PC, IR, resultado
